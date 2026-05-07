@@ -377,7 +377,7 @@ export default function App() {
               </div>
               
             </div>
-            <form className="contact-form" action="https://submit-form.com/sharanyakr105@gmail.com" method="post" encType="text/plain">
+            <form className="contact-form" action="https://formspree.io/f/xbdwkznn" method="post">
               <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
               <label>Email<input type="email" name="email" placeholder="Your email" required /></label>
               <label>Message<textarea name="message" rows="5" placeholder="Write your message" required /></label>
