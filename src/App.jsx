@@ -2,8 +2,8 @@ import React from 'react';
 import { FaDownload, FaEnvelope, FaPhone, FaMapMarkerAlt, FaExternalLinkAlt, FaReact, FaDatabase, FaLaptopCode, FaUser, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 
-const resumeUrl = '/resumekr.pdf';
-const photoUrl = '/photo.jpeg';
+const resumeUrl = import.meta.env.BASE_URL + 'resumekr.pdf';
+const photoUrl = import.meta.env.BASE_URL +'photo.jpeg';
 const linkedinUrl = "https://www.linkedin.com/in/sharanyakr";
 const githubUrl = "https://github.com/sharanyakr06";
 
@@ -13,7 +13,7 @@ const projects = [
     description: 'A responsive website for a specific food shop where users can view available food items, prices, and calculate total cost before visiting the shop.',
     demo: 'https://foodfusion-coral.vercel.app',
     github: 'https://github.com/sharanyakr06/FOODFUSION',
-    image: '/w1.png',
+    image: import.meta.env.BASE_URL + 'w1.png',
   },
 ];
 
@@ -30,22 +30,22 @@ const certificates = [
   {
     title: 'Cloud Computing and Distributed Systems ',
     description: 'NPTEL Certification offered by IIT Kanpur ' ,
-    image: '/ccds.jpeg',
+    image: import.meta.env.BASE_URL + 'ccds.jpeg',
   },
   {
     title: 'Oracle Cloud Infrastructure',
     description: 'OCI Certification offered by Oracle University',
-    image: '/oci.jpeg',
+    image: import.meta.env.BASE_URL + 'oci.jpeg',
   },
   {
     title: 'Agile Explorer',
     description: 'Certificate credential issued by IBM SkillsBuild',
-    image: '/agilexplorer.jpeg',
+    image: import.meta.env.BASE_URL + 'agilexplorer.jpeg',
   },
   {
     title: 'AI Literacy',
     description: ' Certificate issued by IBM SkillsBuild',
-    image: '/AILiteracy.jpeg',
+    image: import.meta.env.BASE_URL + 'AILiteracy.jpeg',
   },
 ];
 
@@ -53,27 +53,27 @@ const achievements = [
   {
     title: 'NCC A Certificate',
     description: 'Secured A certificate from K Battalion Payyanur in 2020 ',
-    image: '/nccA.jpeg',
+    image: import.meta.env.BASE_URL + 'nccA.jpeg',
   },
   {
     title: 'NCC B Certificate',
     description: 'Secured B certificate from KAR Battalion Madikeri in 2024 ',
-    image: '/nccB.jpeg',
+    image: import.meta.env.BASE_URL + 'nccB.jpeg',
   },
   {
     title: 'NCC C Certificate',
     description: 'Secured C certificate from KAR Battalion Madikeri in 2025',
-    image: '/nccC.jpeg',
+    image: import.meta.env.BASE_URL + 'nccC.jpeg',
   },
   {
     title: 'CATC 2024 Certificate',
     description: 'Attended Combined Annual Training Camp 2024 held at KPT Mangalore',
-    image: '/CATC24.jpeg',
+    image: import.meta.env.BASE_URL + 'CATC24.jpeg',
   },
   {
     title: 'CATC 2025 Certificate',
     description: 'Attended Combined Annual Training Camp 2025 held at Nehru College Sullia',
-    image: '/CATC25.jpeg',
+    image: import.meta.env.BASE_URL + 'CATC25.jpeg',
   },
 ];
 
@@ -377,7 +377,7 @@ export default function App() {
               </div>
               
             </div>
-            <form className="contact-form" action="mailto:sharanyakr105@gmail.com" method="post" encType="text/plain">
+            <form className="contact-form" action="https://submit-form.com/sharanyakr105@gmail.com" method="post" encType="text/plain">
               <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
               <label>Email<input type="email" name="email" placeholder="Your email" required /></label>
               <label>Message<textarea name="message" rows="5" placeholder="Write your message" required /></label>
