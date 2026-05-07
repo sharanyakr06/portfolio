@@ -388,6 +388,15 @@ export default function App() {
               </a>
               
               <a 
+                href="tel:+917034899346"
+                className="primary-button"
+                style={{display: 'inline-flex', alignItems: 'center', gap: '0.6rem'}}
+                title="Click to call (mobile) or copy number (desktop)"
+              >
+                <FaPhone /> Call Me
+              </a>
+              
+              <a 
                 href="https://wa.me/917034899346"
                 target="_blank"
                 rel="noreferrer"
