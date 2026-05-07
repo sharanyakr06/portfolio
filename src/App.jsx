@@ -367,28 +367,36 @@ export default function App() {
             <span>Contact</span>
             <h2>Let's Connect</h2>
           </div>
-          <div className="contact-layout">
-            <div className="contact-copy">
-              <p>Have an idea or opportunity ? Let’s connect!</p>
+          
+          <div style={{
+            maxWidth: '600px',
+            margin: '3rem auto',
+            textAlign: 'center',
+            padding: '2rem'
+          }}>
+            <p style={{color: '#d7dbfc', marginBottom: '2rem', fontSize: '1.1rem'}}>
+              Have an idea or opportunity? Let's connect!
+            </p>
+            
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center'}}>
+              <a 
+                href="mailto:sharanyakr105@gmail.com"
+                className="primary-button"
+                style={{display: 'inline-flex', alignItems: 'center', gap: '0.6rem'}}
+              >
+                <FaEnvelope /> Email Me
+              </a>
               
-              <div className="contact-info">
-                <div><strong>Email:</strong> sharanyakr105@gmail.com</div>
-                <div><strong>Phone:</strong> +91 7034899346</div>
-              </div>
-              
+              <a 
+                href="https://wa.me/917034899346"
+                target="_blank"
+                rel="noreferrer"
+                className="secondary-button"
+                style={{display: 'inline-flex', alignItems: 'center', gap: '0.6rem'}}
+              >
+                <FaPhone /> WhatsApp
+              </a>
             </div>
-            <form className="contact-form" action="https://api.web3forms.com/submit" method="post">
-
-            <input type="hidden" name="access_key" value="247acc9e-bdf2-441a-a41b-391ea1e90f7b" />
-            <input type="hidden" name="subject" value="New Message from Portfolio" />
-            <input type="hidden" name="from_name" value="Portfolio Contact" />
-            <input type="hidden" name="redirect" value="https://sharanyakr06.github.io/portfolio/" />
-
-              <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
-              <label>Email<input type="email" name="email" placeholder="Your email" required /></label>
-              <label>Message<textarea name="message" rows="5" placeholder="Write your message" required /></label>
-              <button type="submit" className="primary-button">Send Message</button>
-            </form>
           </div>
         </section>
 
