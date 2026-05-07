@@ -377,7 +377,26 @@ export default function App() {
               </div>
               
             </div>
-            <form className="contact-form" action="https://formspree.io/f/xbdwkznn" method="post">
+            <form className="contact-form" action="https://formspree.io/f/xbdwkznn" method="post" onSubmit={(e) => {
+            e.preventDefault();
+            const form = e.target;
+            fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+            'Accept': 'application/json'
+            }
+            }).then(response => {
+          if (response.ok) {
+            alert('✅ Message sent successfully! I will get back to you soon.');
+            form.reset();
+          } else {
+            alert('❌ Error sending message. Please try again.');
+          }
+        }).catch(error => {
+          alert('❌ Error: ' + error);
+        });
+      }}>
               <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
               <label>Email<input type="email" name="email" placeholder="Your email" required /></label>
               <label>Message<textarea name="message" rows="5" placeholder="Write your message" required /></label>
