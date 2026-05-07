@@ -377,7 +377,13 @@ export default function App() {
               </div>
               
             </div>
-            <form className="contact-form" action="https://formspree.io/f/xbdwkznn" method="post">
+            <form className="contact-form" action="https://api.web3forms.com/submit" method="post">
+
+            <input type="hidden" name="access_key" value="247acc9e-bdf2-441a-a41b-391ea1e90f7b" />
+            <input type="hidden" name="subject" value="New Message from Portfolio" />
+            <input type="hidden" name="from_name" value="Portfolio Contact" />
+            <input type="hidden" name="redirect" value="https://sharanyakr06.github.io/portfolio/" />
+
               <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
               <label>Email<input type="email" name="email" placeholder="Your email" required /></label>
               <label>Message<textarea name="message" rows="5" placeholder="Write your message" required /></label>
