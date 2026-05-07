@@ -371,12 +371,27 @@ export default function App() {
             <div className="contact-copy">
               <p>Have an idea or opportunity ? Let’s connect!</p>
               
-              <div className="contact-info">
-                <div><strong>Email:</strong> sharanyakr105@gmail.com</div>
-                <div><strong>Phone:</strong> +91 7034899346</div>
+              <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem'}}>
+                <a 
+                  href="https://wa.me/917034899346"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="primary-button"
+                  style={{display: 'inline-flex', alignItems: 'center', gap: '0.6rem', width: 'fit-content'}}
+                >
+                  <FaPhone /> WhatsApp
+                </a>
+                
+                <a 
+                  href="tel:+917034899346"
+                  className="secondary-button"
+                  style={{display: 'inline-flex', alignItems: 'center', gap: '0.6rem', width: 'fit-content'}}
+                >
+                  <FaPhone /> Call Me
+                </a>
               </div>
-              
             </div>
+
             <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
             <input type="hidden" name="access_key" value="247acc9e-bdf2-441a-a41b-391ea1e90f7b" />
